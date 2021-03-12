@@ -9,16 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'The Dating app';
   users: any;
+  ​weatherUpdate: any;
 
   constructor(private http:HttpClient){}
 
   ngOnInit() {
     this.getUsers();
+    this.getWeather();
   }
 
   getUsers(){
     this.http.get('https://localhost:5001/api/users').subscribe(response => {
       this.users = response;
+    },error => {
+      console.log(error);
+    })
+  }
+  getWeather(){
+    this.http.get('https://localhost:5001/api/weatherforecast').subscribe(response => {
+      this.​weatherUpdate = response;
     },error => {
       console.log(error);
     })
