@@ -13,6 +13,6 @@ Run first API by `dotnet run` or `dotnet watch run` and client by `ng serve` for
 - Then run client or Angular app.
   - use for angular cli `ng serve.`
 - To show the output on Postman or browser only for **API** project use `https://localhost:5001/...`
-- To show the output on browser as **angular** project of **client** project use `http://localhost:4200/...`
+- To show the output on browser as **angular** project of **client** project use `http://localhost:4200/...` or `http://localhost:4200/...`
 
 **[N.B. You may need to use `dotnet dev-certs https --trust` including or excluding `dotnet dev-certs https --clean` before.]**
